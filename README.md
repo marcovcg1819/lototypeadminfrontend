@@ -1,0 +1,2 @@
+# lototypeadminfrontend
+lototypeadminfrontend
