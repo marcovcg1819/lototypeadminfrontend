@@ -1,0 +1,1774 @@
+{
+	"info": {
+		"_postman_id": "d4a4eb3f-af88-420d-a442-7c3b75da2deb",
+		"name": "lotto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "saveManager deshab api admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{barrerAdmin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fullname\":\"Marco Vinicio\",\n    \"fulllastname\":\"Castro Guzman\",\n    \"phone\":64577083,\n    \"idnumdoc\":\"011747790\",\n    \"password\":\"mvcg5678\",\n    \"logoimage\":\"logo.jpg\",\n    \"housename\":\"LOTERIA LA MEJOR\",\n    \"sloganfirst\":\"SU MEJOR LOTERIA\",\n    \"slogansecond\":\"Loteria exclusiva\",\n    \"email\":\"marcovcg@gmail.com\",\n    \"datet\":\"2012-04-23T18:25:43.511Z\",\n    \"idZone\":1,\n    \"idCurrency\":2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{ipadmin}}:{{adminport}}/api/lotto/{{endpointadmin}}/v1/manager",
+							"protocol": "http",
+							"host": [
+								"{{ipadmin}}"
+							],
+							"port": "{{adminport}}",
+							"path": [
+								"api",
+								"lotto",
+								"{{endpointadmin}}",
+								"v1",
+								"manager"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "savecompetitor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{barrerAdmin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"denis@hotmail.com\",\n    \"fullnames\":\"Denis\",\n    \"fulllastnames\":\"Castro\",\n    \"idCountry\":\"1\",\n    \"phone\":\"78798987\",\n    \"socialaccount\":\"denisc\",\n    \"pass\":\"12345\",\n    \"dateat\":\"2012-04-23T18:25:43.511Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{ipadmin}}:{{adminport}}/api/lotto/{{endpointadmin}}/v1/competitor",
+							"protocol": "http",
+							"host": [
+								"{{ipadmin}}"
+							],
+							"port": "{{adminport}}",
+							"path": [
+								"api",
+								"lotto",
+								"{{endpointadmin}}",
+								"v1",
+								"competitor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PaymentsPettitionLoad",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{barrerAdmin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":null,\n    \"idManager\":1,\n    \"idCompetitor\":1,\n    \"typepayment\":\"\",\n    \"status\":2,\n    \"datepay\":\"2012-04-23T18:25:43.511Z\",\n    \"mount\":500\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{ipadmin}}:{{adminport}}/api/lotto/{{endpointadmin}}/v1/paymentspettition/load",
+							"protocol": "http",
+							"host": [
+								"{{ipadmin}}"
+							],
+							"port": "{{adminport}}",
+							"path": [
+								"api",
+								"lotto",
+								"{{endpointadmin}}",
+								"v1",
+								"paymentspettition",
+								"load"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PaymentsPettitionPay",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{barrerAdmin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":null,\n    \"idManager\":1,\n    \"idCompetitor\":1,\n    \"typepayment\":\"\",\n    \"status\":2,\n    \"datepay\":\"2012-04-23T18:25:43.511Z\",\n    \"mount\":20\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{ipadmin}}:{{adminport}}/api/lotto/{{endpointadmin}}/v1/paymentspettition/pay",
+							"protocol": "http",
+							"host": [
+								"{{ipadmin}}"
+							],
+							"port": "{{adminport}}",
+							"path": [
+								"api",
+								"lotto",
+								"{{endpointadmin}}",
+								"v1",
+								"paymentspettition",
+								"pay"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PaymentsPettitionPayService",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{barrerAdmin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":null,\n    \"idManager\":1,\n    \"idCompetitor\":1,\n    \"typepayment\":\"\",\n    \"status\":2,\n    \"datepay\":\"2012-04-23T18:25:43.511Z\",\n    \"mount\":19\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{ipadmin}}:{{adminport}}/api/lotto/{{endpointadmin}}/v1/paymentspettition/payService",
+							"protocol": "http",
+							"host": [
+								"{{ipadmin}}"
+							],
+							"port": "{{adminport}}",
+							"path": [
+								"api",
+								"lotto",
+								"{{endpointadmin}}",
+								"v1",
+								"paymentspettition",
+								"payService"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "saveCard admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{barrerAdmin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"card\":\"39-40-19-20-48-40-28-29-3-4-37-38-12-13-46-47\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{ipadmin}}:{{adminport}}/api/lotto/{{endpointadmin}}/v1/card",
+							"protocol": "http",
+							"host": [
+								"{{ipadmin}}"
+							],
+							"port": "{{adminport}}",
+							"path": [
+								"api",
+								"lotto",
+								"{{endpointadmin}}",
+								"v1",
+								"card"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "saveLottery",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{barrerAdmin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"idManager\":null,\n    \"lotteryname\":\"Loteria de Oct 3\",\n    \"lotterycount\":2,\n    \"prize\":45,\n    \"cardprice\":20,\n    \"maxcards\":5,\n    \"active\":1,\n    \"datelottery\":\"2012-04-23T18:25:43.511Z\",\n    \"minutesafterbuy\":0,\n    \"minutesafterwinner\":0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{ipadmin}}:{{adminport}}/api/lotto/{{endpointadmin}}/v1/lottery",
+							"protocol": "http",
+							"host": [
+								"{{ipadmin}}"
+							],
+							"port": "{{adminport}}",
+							"path": [
+								"api",
+								"lotto",
+								"{{endpointadmin}}",
+								"v1",
+								"lottery"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "saveBingo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{barrerAdmin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"idManager\":null,\n    \"rafflename\":\"Bingo de Oct A\",\n    \"lotterycount\":2,\n    \"prize1\":15,\n    \"prize2\":10,\n    \"prize3\":5,\n    \"cardprice\":10,\n    \"mincard\":10,\n    \"maxcard\":20,\n    \"active\":1,\n    \"raffledate\":\"2012-04-23T18:25:43.511Z\",\n    \"minutesafterbuy\":0,\n    \"minutesafterwinner\":0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{ipadmin}}:{{adminport}}/api/lotto/{{endpointadmin}}/v1/bingo",
+							"protocol": "http",
+							"host": [
+								"{{ipadmin}}"
+							],
+							"port": "{{adminport}}",
+							"path": [
+								"api",
+								"lotto",
+								"{{endpointadmin}}",
+								"v1",
+								"bingo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "saveActuaLottery quitar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{barrerAdmin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"idLottery\":1,\n    \"idCard\":1,\n    \"winner\":0,\n    \"active\":1,\n    \"showedcards\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{ipadmin}}:{{adminport}}/api/lotto/{{endpointadmin}}/v1/actualottery",
+							"protocol": "http",
+							"host": [
+								"{{ipadmin}}"
+							],
+							"port": "{{adminport}}",
+							"path": [
+								"api",
+								"lotto",
+								"{{endpointadmin}}",
+								"v1",
+								"actualottery"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buyCarton front end",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{barrerAdmin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{ipadmin}}:{{adminport}}/api/lotto/{{endpointadmin}}/v1/actualottery/buyCarton",
+							"protocol": "http",
+							"host": [
+								"{{ipadmin}}"
+							],
+							"port": "{{adminport}}",
+							"path": [
+								"api",
+								"lotto",
+								"{{endpointadmin}}",
+								"v1",
+								"actualottery",
+								"buyCarton"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buyBingoCarton front end",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{barrerAdmin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{ipadmin}}:{{adminport}}/api/lotto/{{endpointadmin}}/v1/bingo/buyBingoCarton",
+							"protocol": "http",
+							"host": [
+								"{{ipadmin}}"
+							],
+							"port": "{{adminport}}",
+							"path": [
+								"api",
+								"lotto",
+								"{{endpointadmin}}",
+								"v1",
+								"bingo",
+								"buyBingoCarton"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "saveServicePayment deshabilitar porque se paga cuando hace pago paypal",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{barrerAdmin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"payment\":6.70,\n    \"datepayment\":\"2012-04-23T18:25:43.511Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{ipadmin}}:{{adminport}}/api/lotto/{{endpointadmin}}/v1/servicepayment",
+							"protocol": "http",
+							"host": [
+								"{{ipadmin}}"
+							],
+							"port": "{{adminport}}",
+							"path": [
+								"api",
+								"lotto",
+								"{{endpointadmin}}",
+								"v1",
+								"servicepayment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getServicePayments",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{barrerAdmin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ipadmin}}:{{adminport}}/api/lotto/{{endpointadmin}}/v1/servicepayment",
+							"protocol": "http",
+							"host": [
+								"{{ipadmin}}"
+							],
+							"port": "{{adminport}}",
+							"path": [
+								"api",
+								"lotto",
+								"{{endpointadmin}}",
+								"v1",
+								"servicepayment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPaymentsPetitionLoad",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{barrerAdmin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ipadmin}}:{{adminport}}/api/lotto/{{endpointadmin}}/v1/paymentspettition/load/1",
+							"protocol": "http",
+							"host": [
+								"{{ipadmin}}"
+							],
+							"port": "{{adminport}}",
+							"path": [
+								"api",
+								"lotto",
+								"{{endpointadmin}}",
+								"v1",
+								"paymentspettition",
+								"load",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPaymentsPetitionPay",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{barrerAdmin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ipadmin}}:{{adminport}}/api/lotto/{{endpointadmin}}/v1/paymentspettition/pay/1",
+							"protocol": "http",
+							"host": [
+								"{{ipadmin}}"
+							],
+							"port": "{{adminport}}",
+							"path": [
+								"api",
+								"lotto",
+								"{{endpointadmin}}",
+								"v1",
+								"paymentspettition",
+								"pay",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPaymentsPetitionPayService",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{barrerAdmin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ipadmin}}:{{adminport}}/api/lotto/{{endpointadmin}}/v1/paymentspettition/payService/1",
+							"protocol": "http",
+							"host": [
+								"{{ipadmin}}"
+							],
+							"port": "{{adminport}}",
+							"path": [
+								"api",
+								"lotto",
+								"{{endpointadmin}}",
+								"v1",
+								"paymentspettition",
+								"payService",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getLotteries",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{barrerAdmin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ipadmin}}:{{adminport}}/api/lotto/{{endpointadmin}}/v1/lottery",
+							"protocol": "http",
+							"host": [
+								"{{ipadmin}}"
+							],
+							"port": "{{adminport}}",
+							"path": [
+								"api",
+								"lotto",
+								"{{endpointadmin}}",
+								"v1",
+								"lottery"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getBingos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{barrerAdmin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ipadmin}}:{{adminport}}/api/lotto/{{endpointadmin}}/v1/lottery",
+							"protocol": "http",
+							"host": [
+								"{{ipadmin}}"
+							],
+							"port": "{{adminport}}",
+							"path": [
+								"api",
+								"lotto",
+								"{{endpointadmin}}",
+								"v1",
+								"lottery"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getActualLotteries",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{barrerAdmin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ipadmin}}:{{adminport}}/api/lotto/{{endpointadmin}}/v1/actualottery/2",
+							"protocol": "http",
+							"host": [
+								"{{ipadmin}}"
+							],
+							"port": "{{adminport}}",
+							"path": [
+								"api",
+								"lotto",
+								"{{endpointadmin}}",
+								"v1",
+								"actualottery",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getActualBingos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{barrerAdmin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ipadmin}}:{{adminport}}/api/lotto/{{endpointadmin}}/v1/actualottery/2",
+							"protocol": "http",
+							"host": [
+								"{{ipadmin}}"
+							],
+							"port": "{{adminport}}",
+							"path": [
+								"api",
+								"lotto",
+								"{{endpointadmin}}",
+								"v1",
+								"actualottery",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllZones",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ipadmin}}:{{adminport}}/api/lotto/web/v1/settings/zones",
+							"protocol": "http",
+							"host": [
+								"{{ipadmin}}"
+							],
+							"port": "{{adminport}}",
+							"path": [
+								"api",
+								"lotto",
+								"web",
+								"v1",
+								"settings",
+								"zones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllCurrencies",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{ipadmin}}:{{adminport}}/api/lotto/web/v1/settings/currecies",
+							"protocol": "http",
+							"host": [
+								"{{ipadmin}}"
+							],
+							"port": "{{adminport}}",
+							"path": [
+								"api",
+								"lotto",
+								"web",
+								"v1",
+								"settings",
+								"currecies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "paymentPetitionApproveLoad",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{barrerAdmin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":19\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{ipadmin}}:{{adminport}}/api/lotto/{{endpointadmin}}/v1/paymentspettition/ApproveLoad",
+							"protocol": "http",
+							"host": [
+								"{{ipadmin}}"
+							],
+							"port": "{{adminport}}",
+							"path": [
+								"api",
+								"lotto",
+								"{{endpointadmin}}",
+								"v1",
+								"paymentspettition",
+								"ApproveLoad"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "paymentPetitionApprovePay",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{barrerAdmin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{ipadmin}}:{{adminport}}/api/lotto/{{endpointadmin}}/v1/paymentspettition/ApprovePay",
+							"protocol": "http",
+							"host": [
+								"{{ipadmin}}"
+							],
+							"port": "{{adminport}}",
+							"path": [
+								"api",
+								"lotto",
+								"{{endpointadmin}}",
+								"v1",
+								"paymentspettition",
+								"ApprovePay"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "paymentPetitionApprovePayService",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{barrerAdmin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":20\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{ipadmin}}:{{adminport}}/api/lotto/{{endpointadmin}}/v1/paymentspettition/ApprovePayService",
+							"protocol": "http",
+							"host": [
+								"{{ipadmin}}"
+							],
+							"port": "{{adminport}}",
+							"path": [
+								"api",
+								"lotto",
+								"{{endpointadmin}}",
+								"v1",
+								"paymentspettition",
+								"ApprovePayService"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "paymentPetitionDenyLoad",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{barrerAdmin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":13\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{ipadmin}}:{{adminport}}/api/lotto/{{endpointadmin}}/v1/paymentspettition/denyLoad",
+							"protocol": "http",
+							"host": [
+								"{{ipadmin}}"
+							],
+							"port": "{{adminport}}",
+							"path": [
+								"api",
+								"lotto",
+								"{{endpointadmin}}",
+								"v1",
+								"paymentspettition",
+								"denyLoad"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "paymentPetitionDenyPay",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{barrerAdmin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":14\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{ipadmin}}:{{adminport}}/api/lotto/{{endpointadmin}}/v1/paymentspettition/denyPay",
+							"protocol": "http",
+							"host": [
+								"{{ipadmin}}"
+							],
+							"port": "{{adminport}}",
+							"path": [
+								"api",
+								"lotto",
+								"{{endpointadmin}}",
+								"v1",
+								"paymentspettition",
+								"denyPay"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "paymentPetitiondenyPayService",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{barrerAdmin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":15\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{ipadmin}}:{{adminport}}/api/lotto/{{endpointadmin}}/v1/paymentspettition/denyPayService",
+							"protocol": "http",
+							"host": [
+								"{{ipadmin}}"
+							],
+							"port": "{{adminport}}",
+							"path": [
+								"api",
+								"lotto",
+								"{{endpointadmin}}",
+								"v1",
+								"paymentspettition",
+								"denyPayService"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateManager",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{barrerAdmin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fullname\":\"Raul Ernesto\",\n    \"fulllastname\":\"Dary Quintanilla\",\n    \"phone\":64577083,\n    \"idnumdoc\":\"011747790\",\n    \"password\":\"raul123\",\n    \"logoimage\":\"logo1.jpg\",\n    \"housename\":\"LOTERIA LA DIVINA EX 1\",\n    \"sloganfirst\":\"SU MEJOR LOTERIA\",\n    \"slogansecond\":\"Loteria exclusiva\",\n    \"datet\":\"2012-04-23T18:25:43.511Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{ipadmin}}:{{adminport}}/api/lotto/{{endpointadmin}}/v1/manager",
+							"protocol": "http",
+							"host": [
+								"{{ipadmin}}"
+							],
+							"port": "{{adminport}}",
+							"path": [
+								"api",
+								"lotto",
+								"{{endpointadmin}}",
+								"v1",
+								"manager"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "managerChangePass",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{barrerAdmin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"lastPass\":\"1234\",\n    \"newPass\":\"12345\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{ipadmin}}:{{adminport}}/api/lotto/{{endpointadmin}}/v1/manager/changepass",
+							"protocol": "http",
+							"host": [
+								"{{ipadmin}}"
+							],
+							"port": "{{adminport}}",
+							"path": [
+								"api",
+								"lotto",
+								"{{endpointadmin}}",
+								"v1",
+								"manager",
+								"changepass"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logs deshab api admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{barrerAdmin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"dateIssue\":\"2023-10-03 17:54:48.116958\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{ipadmin}}:{{adminport}}/logs",
+							"protocol": "http",
+							"host": [
+								"{{ipadmin}}"
+							],
+							"port": "{{adminport}}",
+							"path": [
+								"logs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Login Test\", function () {",
+									"    if (pm.response.to.have.status(200)) {",
+									"        let responseData=pm.response.json();",
+									"        console.log(\"hola\"+responseData.token);",
+									"        pm.globals.set(\"barrerAdmin\", responseData.token);",
+									"    }",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\":\"gladis@gmail.com\",\n    \"password\":\"gladis7890\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{ipadmin}}:{{adminport}}/api/lotto/{{endpointadmin}}/v1/auth",
+							"protocol": "http",
+							"host": [
+								"{{ipadmin}}"
+							],
+							"port": "{{adminport}}",
+							"path": [
+								"api",
+								"lotto",
+								"{{endpointadmin}}",
+								"v1",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "client",
+			"item": [
+				{
+					"name": "userinfo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "EAAX2ngJoj7wBO5Xw6xh8r30ZBUVpBRLaJykbCdwUIdPnnJwzREKXjlXBVIvtZBmK5L5ZCBElsOhkFWdURLOMQjZAaYGMriJLbZCyUH7t2PNZBC5yLpBrfNsxC5CkfNhE8yBZB8bhOxK91ksaPuNvsZCEL3x7OMP6CJqNz8MAqaKUl6imut5Jm3oXg0Ub7ElCZA8THsiZC6QeMp5H5O4c7hQTtf46ZBPa2nwDxEJQmZBbjcKfZAeNqQRCosZBNt",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Barer EAAX2ngJoj7wBO5Xw6xh8r30ZBUVpBRLaJykbCdwUIdPnnJwzREKXjlXBVIvtZBmK5L5ZCBElsOhkFWdURLOMQjZAaYGMriJLbZCyUH7t2PNZBC5yLpBrfNsxC5CkfNhE8yBZB8bhOxK91ksaPuNvsZCEL3x7OMP6CJqNz8MAqaKUl6imut5Jm3oXg0Ub7ElCZA8THsiZC6QeMp5H5O4c7hQTtf46ZBPa2nwDxEJQmZBbjcKfZAeNqQRCosZBNt",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/user/info",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"info"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "hello",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "ya29.a0AfB_byDrk3nblJIXTfHAiy81Q01oqhWfBB29gqMLzhRN1wCYefZOp293ZlyLOaxbqFu2DlRWjc2U0OpvvoXVfUs1jJN6DTFbYr5OmywwLmbfS6SX88Nk2uhrapnZEODdXCbvuQ6HLWJatRowowmBhSDokUmJ90n1n6tbaCgYKAZUSARASFQGOcNnC2U_7Pv3VUnxazbna1JsueA0171",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.googleapis.com/oauth2/v2/userinfo",
+							"protocol": "https",
+							"host": [
+								"www",
+								"googleapis",
+								"com"
+							],
+							"path": [
+								"oauth2",
+								"v2",
+								"userinfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "oauth2",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "scope",
+									"value": "openid profile email",
+									"type": "string"
+								},
+								{
+									"key": "useBrowser",
+									"value": false,
+									"type": "boolean"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://accounts.google.com/o/oauth2/token",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "https://accounts.google.com/o/oauth2/auth",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "https://www.getpostman.com/oauth2/callback",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "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",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "79329263413-n48ghtab52o5ofvu4lv1sdm6nqo4haj2.apps.googleusercontent.com",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "Google Oauth getpostman",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://www.getpostman.com/oauth2/callback",
+							"protocol": "https",
+							"host": [
+								"www",
+								"getpostman",
+								"com"
+							],
+							"path": [
+								"oauth2",
+								"callback"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "oauth2 Facebook",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "useBrowser",
+									"value": false,
+									"type": "boolean"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://graph.facebook.com/oauth/access_token?client_id=1678533389225916&client_secret= ab83a264f0b97ccb01569c4bdc0ecaed&grant_type=client_credentials",
+									"type": "string"
+								},
+								{
+									"key": "scope",
+									"value": "client_credentials",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "ab83a264f0b97ccb01569c4bdc0ecaed",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "1678533389225916",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "https://graph.facebook.com/v18.0&access_token=1678533389225916|ab83a264f0b97ccb01569c4bdc0ecaed",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "Facebook Oauth getpostman",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "https://www.getpostman.com/oauth2/callback",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/user/info",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"info"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "auth",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Login Test\", function () {",
+									"    if (pm.response.to.have.status(200)) {",
+									"        let responseData=pm.response.json();",
+									"        console.log(\"hola\"+responseData.token);",
+									"        pm.globals.set(\"barrerWeb\", responseData.token);",
+									"    }",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"marcovcg1819@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/lotto/web/v1/auth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"lotto",
+								"web",
+								"v1",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findLottery",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{barrerWeb}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"housename\":\"L\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/lotto/web/v1/lottery",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"lotto",
+								"web",
+								"v1",
+								"lottery"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PaymentsPettitionLoad",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{barrerWeb}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":null,\n    \"idManager\":34,\n    \"idCompetitor\":null,\n    \"typepayment\":\"\",\n    \"status\":1,\n    \"datepay\":\"2012-04-23T18:25:43.511Z\",\n    \"mount\":500\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/lotto/web/v1/paymentspettition/load",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"lotto",
+								"web",
+								"v1",
+								"paymentspettition",
+								"load"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CompettitorUpdate",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{barrerWeb}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"\",\n    \"fullnames\":\"Marco Vinicio\",\n    \"fulllastnames\":\"Castro Guzman\",\n    \"idCountry\":\"1\",\n    \"phone\":\"64577082\",\n    \"socialaccount\":\"\",\n    \"pass\":\"\",\n    \"dateat\":\"2012-04-23T18:25:43.511Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/lotto/web/v1/compettitor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"lotto",
+								"web",
+								"v1",
+								"compettitor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PaymentsPettitionList",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{barrerWeb}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/lotto/web/v1/paymentspettition/load/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"lotto",
+								"web",
+								"v1",
+								"paymentspettition",
+								"load",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BalanceCompettitor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{barrerWeb}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/lotto/web/v1/compettitor/balance",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"lotto",
+								"web",
+								"v1",
+								"compettitor",
+								"balance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getLas10Lotteries",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{barrerWeb}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/lotto/web/v1/lottery/lastthen/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"lotto",
+								"web",
+								"v1",
+								"lottery",
+								"lastthen",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
